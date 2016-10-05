@@ -2,6 +2,8 @@
     
     <html lang="en">
     <head>
+    <%@taglib prefix="c" uri="http://www.springframework.org/tags" %>
+    <%@ taglib prefix="s" uri="http://java.sun.com/jsp/jstl/core" %>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
   
@@ -22,13 +24,13 @@
     /* Add a gray background color and some padding to the footer */
     footer {
       background-color:powderblue;
-      padding: 50px;s
+      padding: 40px;
     }
     
   .carousel-inner img {
       width: 1020px; /* Set width to 50% */
       margin:auto;
-      max-height:300px;
+      max-height:400px;
   }
 "src/main/webapp/images"
   /* Hide the carousel text when the screen is less than 600 pixels wide */
@@ -63,7 +65,7 @@
         </li>
         
         <li>
-          <a href="#"><span class="glyphicon glyphicon-log-in"></span> Login </a>
+          <a href="login.jsp"><span class="glyphicon glyphicon-log-in"></span> Login </a>
         </li>
       </ul>
     </div>
@@ -120,7 +122,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="images/lame.jpg" alt="Image">
+        <img src="<c:url value='/resources/images/lame.jpg'/>">
         <div class="carousel-caption">
           
           
@@ -160,42 +162,141 @@
     </a>
 </div>
   
-<h1>&nbsp&nbsp Text-shadow effect!</h1>
+<h3>&nbsp&nbsp Featured product</h3>
   <hr></hr>
-<div class="container text-center">
-  <br>
-  <div class="row">
-    <div class="col-sm-3">
-      <img src="images/headlights.jpg" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <img src="images/taillight.jpg" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <img src="images/taillight.jpg" class="img-responsive" style="width:100" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <img src="images/taillight.jpg" class="img-responsive" style="width:100%" alt="Image">
-    </div>
-  </div>
-</div>
-  <br>
+    <div class="container text-center"> 
+         <div class="row">
+             <div class="col-lg-12">
+                <h3>Latest Features</h3>
+             </div>
+         </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row text-center">
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="images/taillight.jpg" class="img-responsive"style="width:100%" alt="">
+                    <div class="caption">
+                        <h3>Feature Label</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Add to cart</a> <a href="#" class="btn btn-default">Details</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="images/taillight.jpg" class="img-responsive" style="width:100%" alt="">
+                    <div class="caption">
+                        <h3>Feature Label</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Add to cart</a> <a href="#" class="btn btn-default">Details</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="images/taillight.jpg" class="img-responsive" style="width:100%" alt="">
+                    <div class="caption">
+                        <h3>Feature Label</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Add to cart</a> <a href="#" class="btn btn-default">Details</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="images/taillight.jpg" class="img-responsive" style="width:100%" alt="">
+                    <div class="caption">
+                        <h3>Feature Label</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Add to cart</a> <a href="#" class="btn btn-default">Details</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>  
+    <div class="row">
+            <div class="col-lg-12">
+                <h3>Latest Features</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="images/headlights.jpg" class="img-responsive" style="width:100%" alt="">
+                    <div class="caption">
+                        <h3>Feature Label</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Add to cart</a> <a href="#" class="btn btn-default">Details</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="images/headlights.jpg" class="img-responsive" style="width:100%" alt="">
+                    <div class="caption">
+                        <h3>Feature Label</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Add to cart</a> <a href="#" class="btn btn-default">Details</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="images/headlights.jpg" class="img-responsive" style="width:100%" alt="">
+                    <div class="caption">
+                        <h3>Feature Label</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Add to cart</a> <a href="#" class="btn btn-default">Details</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="images/headlights.jpg" class="img-responsive" style="width:100%" alt="">
+                    <div class="caption">
+                        <h3>Feature Label</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <p>
+                            <a href="#" class="btn btn-primary">Add to cart</a> <a href="#" class="btn btn-default">Details</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+       
   
 
 		<footer id="footer-block">
-    <div class="social">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="socials">
-                        <a href="https://www.linkedin.com/company/autokartz-com"><i class="fa fa-linkedin"></i></a>
-                        <a href="https://www.facebook.com/autokartzcom/"><i class="fa fa-facebook"></i></a>
-                        <a href="https://twitter.com/autokartz"><i class="fa fa-twitter"></i></a>
-                        <a href="https://plus.google.com/105753143967879451251/about"><i class="fa fa-google-plus"></i></a>
-                        <a href="https://in.pinterest.com/autokartzcom/"><i class="fa fa-pinterest-p"></i></a>
-                    </div>   
-                </div>
-                <div class="col-md-6">
+          <div class="container">
+            <div class="row">  
+                <div class="col-md-12">
                     <form class="form-horizontal">
                         <input type="text" class="input form-control" placeholder="For Newsletter Enter Your Email">
                         <button type="submit"> SIGN UP <i class="fa fa-angle-right angle_rte"></i></button>
@@ -203,7 +304,7 @@
                 </div>
             </div>
         </div>
-    </div>
+
             	
     <div class="footer-information">
         <div class="container">
@@ -224,7 +325,7 @@
                         <div class="col-md-3 text-center">
                             <i class="fa fa-fighter-jet" style="font-size: 45px;"></i>
                         </div>
-                        <div class="col-md-9 text-center">
+                         <div class="col-md-9 text-center">
                             <h4>Fast Product Delivery</h4>                               
 						   <p>All Product are delivered through fast and reliable logistic services.</p>
                         </div>    
@@ -264,7 +365,7 @@
                 </div>
                 <ul class="footer-categories list-unstyled">
                     <li><a href="aboutus">About Us</a></li>
-                    <li><a href="contact">Contact Us</a></li>
+                    <li><a href="<c:url value="/ContactUs"/>">ContactUs</a></li>
                     <li><a href="shippingreturnpolicy">Shipping &amp; Return Policy</a></li>
                 </ul>
             </div>
